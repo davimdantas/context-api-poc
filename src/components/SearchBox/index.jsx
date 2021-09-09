@@ -1,27 +1,26 @@
 import PokemonCard from 'components/PokemonCard';
-import { useState } from 'react';
+import { useContext } from 'react';
 import usePokemonList from 'utils/usePokemonList';
-
 import { AutoComplete } from '@gympass/yoga';
+import PokeContext from '../../poke-context';
 
 export default function SearchBox() {
-  const [name, setName] = useState('');
+  const { pokeName, setPokeName } = useContext(PokeContext);
   const data = usePokemonList();
 
   return (
     <>
       <AutoComplete
-        value={name}
+        value={pokeName}
         onSelect={(selected) => {
-          console.log('selected :', selected);
-          setName(selected);
+          setPokeName(selected);
         }}
         onClean={() => {
-          setName('');
+          setPokeName('');
         }}
         options={data}
       />
-      {name && <PokemonCard name={name} />}
+      {pokeName && <PokemonCard />}
     </>
   );
 }

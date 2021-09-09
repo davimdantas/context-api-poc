@@ -1,10 +1,12 @@
 import YogaAvatar from 'components/YogaAvatar';
 import { FavoriteFilled } from '@gympass/yoga-icons';
 import usePokemon from 'utils/usePokemon';
-import React from 'react';
+import { useContext } from 'react';
+import PokeContext from '../../poke-context';
 
-export default function PokemonCard({ name }) {
-  const data = usePokemon(name);
+export default function PokemonCard() {
+  const { pokeName } = useContext(PokeContext);
+  const data = usePokemon(pokeName);
   console.log('data :', data);
 
   if (!data) return null;

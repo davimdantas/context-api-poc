@@ -6,19 +6,16 @@ import Counter from 'components/Counter';
 import ContextChild from 'components/ContextChild';
 import AppChild from 'components/AppChild';
 import SearchBox from 'components/SearchBox';
-import PokeContext from './poke-context';
+import PokeProvider from 'components/PokeProvider';
 
 function App() {
-  const [pokeName, setPokeName] = useState('ditto');
-  const value = { pokeName, setPokeName };
-
   return (
     <div>
-      <PokeContext.Provider value={value}>
+      <PokeProvider>
         <SearchBox />
         <Counter />
         <ContextChild />
-      </PokeContext.Provider>
+      </PokeProvider>
       <AppChild />
     </div>
   );

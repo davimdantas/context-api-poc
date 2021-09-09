@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import { useState, useContext } from 'react';
 import { EventCard, Input } from '@gympass/yoga';
+import PokeContext from '../../poke-context';
 
 export default function PokeEvent() {
   const [time, setTime] = useState('19 am');
+  const { thisWillnotBeupdated } = useContext(PokeContext);
 
   return (
     <>
@@ -17,7 +19,7 @@ export default function PokeEvent() {
       <EventCard
         style={{ width: 250 }}
         event={{
-          name: 'Yoga Class',
+          name: thisWillnotBeupdated,
           place: 'Gympass - Live the Mission',
           time,
         }}

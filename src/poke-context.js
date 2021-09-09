@@ -3,6 +3,7 @@ import ditto from './ditto';
 // set the defaults
 const PokeContext = React.createContext({
   pokeName: 'ditto',
+  thisWillnotBeupdated: 'thisWillnotBeupdated',
   setPokeName: () => {},
 });
 

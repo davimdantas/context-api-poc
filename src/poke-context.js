@@ -1,9 +1,10 @@
 import React from 'react';
-
+import ditto from './ditto';
 // set the defaults
-const LanguageContext = React.createContext({
-  language: 'en',
-  setLanguage: () => {},
+const PokeContext = React.createContext({
+  pokemonName: 'ditto',
+  pokemon: ditto,
+  setPokemon: () => {},
 });
 
-export default LanguageContext;
+export default PokeContext;

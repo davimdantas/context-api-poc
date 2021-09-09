@@ -5,6 +5,7 @@ import React from 'react';
 
 export default function PokemonCard({ name }) {
   const data = usePokemon(name);
+  console.log('data :', data);
 
   if (!data) return null;
 

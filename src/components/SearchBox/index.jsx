@@ -13,6 +13,7 @@ export default function SearchBox() {
       <AutoComplete
         value={name}
         onSelect={(selected) => {
+          console.log('selected :', selected);
           setName(selected);
         }}
         onClean={() => {

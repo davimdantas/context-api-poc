@@ -1,13 +1,47 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+		'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+		'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+body {
+	font-family: Rubik;
+	display: flex;
+	justify-content: center;
+}
+
+.card {
+	width: fit-content;
+	padding: 1em;
+	text-align: center;
+	margin: 0 auto 5em;
+	background: rebeccapurple;
+	border-radius: 1em;
+}
+
+.card p {
+	font-size: 4em;
+	margin: 0;
+	text-transform: capitalize;
+	color: white;
+}
+
+.title {
+	display: flex;
+	justify-content: center;
+}
+
+.title p {
+	font-size: 4em;
+	margin-left: 0.5em;
+	text-transform: capitalize;
 }
